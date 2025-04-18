@@ -1,0 +1,152 @@
+/* Withdraw.css */
+
+:root {
+  --primary-color: #1976d2;
+  --primary-light: #4791db;
+  --primary-dark: #115293;
+  --secondary-color: #388e3c;
+  --background-color: #f5f7fa;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --text-light: #757575;
+  --error-color: #d32f2f;
+}
+
+body {
+  background: linear-gradient(135deg, var(--background-color) 0%, #e4e8eb 100%);
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, var(--background-color) 0%, #e4e8eb 100%);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.withdraw-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--card-background);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px -12px rgba(0,0,0,0.2);
+}
+
+.withdraw-input {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 30px;
+  border: 2px solid var(--primary-light);
+  border-radius: 8px;
+  font-size: 1.4rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.withdraw-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.2);
+}
+
+.withdraw-input::placeholder {
+  color: #aaa;
+}
+
+/* Remove number input arrows */
+.withdraw-input::-webkit-outer-spin-button,
+.withdraw-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.withdraw-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.withdraw-button {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(25, 118, 210, 0.25);
+}
+
+.withdraw-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(25, 118, 210, 0.3);
+}
+
+.withdraw-button:active {
+  transform: translateY(1px);
+}
+
+/* Optional: Add a back button to return to dashboard */
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--primary-dark);
+}
+
+.back-link svg {
+  margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .withdraw-form {
+    padding: 30px 20px;
+  }
+  
+  .withdraw-input {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+  
+  .withdraw-button {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+}
